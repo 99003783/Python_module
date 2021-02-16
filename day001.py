@@ -1,3 +1,4 @@
 print("hello")
 print("world")
-print("ltts bangalore")
+print("l bangalore")
+print("i am from linux")
