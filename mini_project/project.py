@@ -1,34 +1,40 @@
 import re
 
-
 count = 0
-lines = 0
 
-rewq = open(r"C:\Users\99003783\Documents\GitHub\Python_module\mini_project\input.txt") 
-filename= rewq.read()
 qwe = input("enter the first keyword")
-l = list(qwe)
+l = qwe.split()
 
-pattern = re.findall(qwe,filename,re.M|re.I)
+pattern = re.compile(qwe,re.I|re.M)
+print(range(pattern))
+
+with open(".\mini_project\input.txt",'r') as f_io:
+    for line in f_io:
+        if qwe in line:
+            print(line)
+            
+for 
+
+
 
 #print(der)
 #print(len(der))this
 
 
 
-for fde in rewq:
+'''for fde in rewq:
     
     lines+=1
     print(fde,end=' ')
 if len(qwe) != None:
-    l.append((lines,qwe.rstrip('\n')))
+    l.append((lines,qwe.rstrip('\n')))'''
 
 
-for answer in rewq:   
+for answer in pattern:   
     count+=1
 with open(qwe +".txt",'a') as file_answer:
-        file_answer.writelines(str(count)+' :')
-        file_answer.writelines(answer[1]+ '\n')
+        file_answer.writelines(str(count) + ' :')
+        file_answer.writelines(answer[1] + '\n')
 
 
 
