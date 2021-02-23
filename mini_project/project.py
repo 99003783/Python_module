@@ -16,19 +16,19 @@ pattern = re.findall(qwe,filename,re.M|re.I)
 
 
 
-for fde in filename:
+for fde in rewq:
     
     lines+=1
-    print(fde)
+    print(fde,end=' ')
 if len(qwe) != None:
     l.append((lines,qwe.rstrip('\n')))
 
 
-for answer in pattern:   
+for answer in rewq:   
     count+=1
 with open(qwe +".txt",'a') as file_answer:
         file_answer.writelines(str(count)+' :')
-        file_answer.writelines(answer[0]+ '\n')
+        file_answer.writelines(answer[1]+ '\n')
 
 
 
