@@ -1,19 +1,26 @@
 import re
 
 count = 0
+str_output=[]
+line=0
 
-qwe = input("enter the first keyword")
-l = qwe.split()
 
-pattern = re.compile(qwe,re.I|re.M)
-print(range(pattern))
+
+#print(range(pattern))
+
+qwe = input("enter the first keyword: ")
+
 
 with open(".\mini_project\input.txt",'r') as f_io:
     for line in f_io:
         if qwe in line:
-            print(line)
             
-for 
+             print(line, end=" ")
+
+
+
+
+wqa = re.findall(qwe,f_io,re.M|re.I)
 
 
 
@@ -30,7 +37,7 @@ if len(qwe) != None:
     l.append((lines,qwe.rstrip('\n')))'''
 
 
-for answer in pattern:   
+for answer in wqa:   
     count+=1
 with open(qwe +".txt",'a') as file_answer:
         file_answer.writelines(str(count) + ' :')
